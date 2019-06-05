@@ -1,0 +1,25 @@
+.topbar{
+  width: 100%;
+  position: fixed;
+  .container{
+    height: 46px;
+    margin: auto;
+    .navigation{
+      display: inline-block;
+      &-home{
+        position: relative;
+        display: flex;
+        border-bottom-color: #1E90FF
+      }
+    .icon{
+      font-size: 30px;
+      color: #1E90FF;
+    }
+    .text{
+      color: #1E90FF;
+      position: relative;
+      bottom: -10px;
+    }
+    }
+  }
+}

@@ -2,20 +2,22 @@
   .container
     %ul.navigation
       %li.navigation-home
-        .icon
+        .navigation-home-icon
           = fa_icon 'home', class: 'icon'
-        %span.text ホーム
+        %span.navigation-home-text ホーム
       %li.navigation-moments
       %li.navigation-notification
       %li.navigation-dm
-    %h1.icon
+    %h1.symbol-icon
       = fa_icon 'twitter', class: 'icon'
-    .search#role
-      %form.search-form
-        %input.search-input
-      %span.search-icon
-    %li.tweetbutton#role
-      %button.tweetbutton-new
-        %li ツイート
+    %ul.navigation-right
+      .search#role
+        %form.search-form
+          -# ＝ form_with @user, do |f|
+          = text_field :name ,"", placeholder:"キーワードを検索", class: "search-input"
+          %span.search-icon
+            = fa_icon 'search', class: 'icon'
+      .tweet-button ツイート
+
 
 

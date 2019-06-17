@@ -1,0 +1,54 @@
+.registrationpage{
+  display: flex;
+  &-whiteblock{
+    background-color: white;
+    &-signupblock{
+      max-width: 350px;
+      &-header{
+        margin: 16px auto;
+        .birdicon{
+          color: #1da1f2;
+          font-size: 45px;
+        }
+      }
+      &-title{
+        font-size: 27px;
+        line-height: 32px;
+      }
+        &-subtitle{
+            font-size: 18px;
+            margin: 16px auto;
+            margin-top: 48px;
+        }
+            &-inputs{
+              margin-bottom: 16px;
+              .field{
+                margin-bottom: 15px;
+                .email-input{
+                  width: 97%;
+                  max-width: 280px;
+                }
+                .password-input{
+                  width: 97%;
+                  max-width: 280px;
+                }
+              }
+              .registrationpage-whiteblock-signupblock-sentbox{
+                display: flex;
+                .sentbox-action{
+                  border-radius: 100%;
+                }
+                  .submitbutton{
+                    background-color: dodgerblue;
+                    color: white;
+                    padding: 7px;
+                    border-radius: 20%;
+                  }
+                .sentbox-field{
+                  margin-left: 20px;
+                }
+              }
+            }
+    }
+  }
+}

@@ -21,22 +21,17 @@
                   = f.check_box :remember_me
                   = f.label :remember_me
             = render "devise/shared/links"
-    .registrationpage-blueblock
-
-    -# %h2 Log in
-    -# = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    -#   .field
-    -#     = f.label :email
-    -#     %br/
-    -#     = f.email_field :email, autofocus: true, autocomplete: "email"
-    -#   .field
-    -#     = f.label :password
-    -#     %br/
-    -#     = f.password_field :password, autocomplete: "current-password"
-    -#   - if devise_mapping.rememberable?
-    -#     .field
-    -#       = f.check_box :remember_me
-    -#       = f.label :remember_me
-    -#   .actions
-    -#     = f.submit "Log in"
-    -# = render "devise/shared/links"
+  .registrationpage-blueblock
+    .registrationpage-blueblock-introductionContent
+      .registrationpage-blueblock-introductionItem 
+        %span.icon-serch
+          = fa_icon 'search', class: "icon"
+          あなたの「好き」をフォローしよう 
+      .registrationpage-blueblock-introductionItem
+        %span.icon-people
+          = fa_icon 'users', class: 'icon'
+          話題のトピックを追いかけましょう
+      .registrationpage-blueblock-introductionItem
+        %span.icon-reply
+          = fa_icon 'comments', class: 'icon'
+          Tsubuyakiに参加しよう

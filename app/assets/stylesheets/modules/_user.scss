@@ -1,7 +1,14 @@
 .registrationpage{
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
   &-whiteblock{
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
     &-signupblock{
       max-width: 350px;
       &-header{
@@ -39,16 +46,34 @@
                   border-radius: 100%;
                 }
                   .submitbutton{
-                    background-color: dodgerblue;
-                    color: white;
-                    padding: 7px;
-                    border-radius: 20%;
+                    cursor: pointer;
+                    background-color: white;
+                    color: dodgerblue;
+                    padding: 10px;
+                    border-radius: 100px;
+                    width: 286px;
                   }
                 .sentbox-field{
                   margin-left: 20px;
                 }
               }
             }
+    }
+  }
+  .registrationpage-blueblock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1da1f2;
+    flex: 1;
+    &-introductionContent{
+      max-width: 440px;
+      .registrationpage-blueblock-introductionItem {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 48px auto;
+      }
     }
   }
 }

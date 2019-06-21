@@ -1,0 +1,19 @@
+.new-acount{
+  font-size: 23px;
+  font-weight: bold;
+  margin: 15px 0px;
+  text-align: center;
+}
+  .newacountInputForm{
+    margin: 15px 0px;
+    text-align: center;
+    &-box{
+      padding: 15px 0px;
+      .newacountInputForm-box-field{
+        background-color: rgb(245, 248, 250);
+        width: 40%;
+        height: 45px;
+        border-bottom: solid #808080;
+      }
+    }
+  }

@@ -21,11 +21,13 @@
       &-title{
         font-size: 27px;
         line-height: 32px;
+        font-weight: bold
       }
         &-subtitle{
             font-size: 18px;
             margin: 16px auto;
             margin-top: 48px;
+            font-weight: bold
         }
             &-inputs{
               margin-bottom: 16px;
@@ -52,6 +54,7 @@
                     padding: 10px;
                     border-radius: 100px;
                     width: 286px;
+                    border: 1px solid #1da1f2;
                   }
                 .sentbox-field{
                   margin-left: 20px;

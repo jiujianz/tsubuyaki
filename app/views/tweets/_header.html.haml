@@ -11,13 +11,20 @@
     %h1.symbol-icon
       = fa_icon 'twitter', class: 'icon'
     %ul.navigation-right
-      .search#role
+      %li.search#role
         %form.search-form
           -# ＝ form_with @user, do |f|
           = text_field :name ,"", placeholder:"キーワードを検索", class: "search-input"
           %span.search-icon
             = fa_icon 'search', class: 'icon'
-      .tweet-button ツイート
+      %li.user-icon
+        .dropdown
+          %ul.dropdown-usermenu
+            %li.dropdown-usermenu-info 
+              = current_user.name
+            %li.signout-button
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      %li.tweet-button ツイート
 
 
 

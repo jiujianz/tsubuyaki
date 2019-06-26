@@ -50,6 +50,21 @@
             top: -1px;
           }
       }
+      .user-icon{
+        width: 55px;
+        cursor: pointer;
+        background-color: black;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+      }
+        .dropdown{
+          position: relative;
+          top: 57px;
+          right: 170px;
+          width: 220px;
+          background-color: white;
+        }
       .tweet-button{
         display: inline-block;
         max-width: 180px;

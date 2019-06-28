@@ -1,0 +1,30 @@
+%h2.new-acount アカウントを作成
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = render "devise/shared/error_messages", resource: resource
+  .newacountInputForm
+    .newacountInputForm-box
+      .field
+        = f.label :name
+        %br/
+        = f.text_field :name, class: "newacountInputForm-box-field", autofocus: true, autocomplete: "name"
+    .newacountInputForm-box
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, class: "newacountInputForm-box-field", autofocus: true, autocomplete: "email"
+    .newacountInputForm-box
+      .field
+        = f.label :password
+        - if @minimum_password_length
+          %em
+            (#{@minimum_password_length} characters minimum)
+        %br/
+        = f.password_field :password, class: "newacountInputForm-box-field", autocomplete: "new-password"
+    .newacountInputForm-box
+      .field
+        = f.label :password_confirmation
+        %br/
+        = f.password_field :password_confirmation, class: "newacountInputForm-box-field", autocomplete: "new-password"
+      .actions
+        = f.submit "Sign up"
+    = render "devise/shared/links"

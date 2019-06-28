@@ -1,0 +1,37 @@
+.registrationpage
+  .registrationpage-whiteblock
+    .registrationpage-whiteblock-signupblock
+      .registrationpage-whiteblock-signupblock-header
+        %span.birdicon
+          = fa_icon 'twitter', class: 'icon'
+      %h1.registrationpage-whiteblock-signupblock-title 「いま」起きていることを見つけよう
+      .registrationpage-whiteblock-signup-form
+        %h2.registrationpage-whiteblock-signupblock-subtitle Tsubuyakiをはじめよう
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .registrationpage-whiteblock-signupblock-inputs
+            .field
+              = f.email_field :email, class: "email-input", autofocus: true, autocomplete: "email", placeholder: "メールアドレス"
+            .field
+              = f.password_field :password, class: "password-input", autocomplete: "current-password", placeholder: "パスワード"
+            - if devise_mapping.rememberable?
+              .registrationpage-whiteblock-signupblock-sentbox
+                .sentbox-actions
+                  = f.submit "ログイン", class: "submitbutton"
+                .sentbox-field
+                  = f.check_box :remember_me
+                  = f.label :remember_me
+            = render "devise/shared/links"
+  .registrationpage-blueblock
+    .registrationpage-blueblock-introductionContent
+      .registrationpage-blueblock-introductionItem 
+        %span.icon-serch
+          = fa_icon 'search', class: "icon"
+          あなたの「好き」をフォローしよう 
+      .registrationpage-blueblock-introductionItem
+        %span.icon-people
+          = fa_icon 'users', class: 'icon'
+          話題のトピックを追いかけましょう
+      .registrationpage-blueblock-introductionItem
+        %span.icon-reply
+          = fa_icon 'comments', class: 'icon'
+          Tsubuyakiに参加しよう

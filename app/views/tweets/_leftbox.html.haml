@@ -1,11 +1,13 @@
 .leftbox
   .leftbox-profile
     .leftbox-profile-link
-      %a.link-mypage{href:"https://twitter.com/"}
+      .link-mypage 
+        = link_to "プロフィール編集", edit_user_path(current_user)
     .leftbox-profile-content
       .leftbox-profile-infomation 
         .leftbox-profile-fullname 
-          %a.acount-name{href:"https://twitter.com/"} urshima taro
+          %a.acount-name{href:"https://twitter.com/"} 
+          = current_user.name
         %span.leftbox-profile-username
           %a.link-name{href:"https://twitter.com/"} @kintaro
       .follow-list

@@ -76,69 +76,102 @@
 				}
 			}
 			}
-		}	
+		}
 		.content{
 			width: 590px;
-			height: 100px;
 			background-color: white;
 			margin: 0 10px;
-			.tweet-content{
-				margin-left: 60px;
-				.tweet-infomation{
-					background-color: white;
-					.fullname{
-						color: black;
-						text-decoration: none;
-					}
-					.user-name{
-						color: #555555;
-						text-decoration: none;
-					}
-					.time{
-						color: #555555;
-					}
-				&-content-text{
-					font-size: 14px;
-                    line-height: 20px;
-				}
-				&-footer{
-					display: flex;
+			.timeline-tweet-box{
+				border: solid #C0C0C0 0.5px;
+				display: flow-root;
+				height: 70px;
+				.form__image{
+					width: 60%;
+					text-align: center;
+					border-radius: 100px;
+					background-color: #f5f8fa;
+					border: solid 1px #e6ecf0;
 					position: relative;
-					bottom: -28px;
-					.icon-reply{
-						color: #C0C0C0;
-						font-size: 18px;
-						margin-right: 85px;
+					left: 85px;
+					top: 20px;
+				}
+				.form__submit{
+					background-color: #1E90FF;
+					font-size: 14px;
+					color: #FFF;
+					text-decoration: none;
+					font-weight: bold;
+					padding: 10px 24px;
+					border-radius: 100px;
+					position: absolute;
+					top: 400px;
+					left: 125px;
+					height: 70px;
+					width: 280px;
+					text-align: center;
+					cursor: pointer;
+				}
+			}
+			.tweet{
+				padding: 10px 5px;
+				border: solid 1px #C0C0C0;
+				.tweet-content{
+					margin-left: 60px;
+					.tweet-infomation{
+						background-color: white;
+						.fullname{
+							color: black;
+							text-decoration: none;
+						}
+						.user-name{
+							color: #555555;
+							text-decoration: none;
+						}
+						.time{
+							color: #555555;
+						}
+					&-content-text{
+						font-size: 14px;
+											line-height: 20px;
 					}
-					.icon-retweet{
-						color: #C0C0C0;
-						font-size: 18px;
-						margin-right: 85px;
+					&-footer{
+						display: flex;
+						padding-top: 30px;
+						.icon-reply{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-retweet{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-favarite{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-reply:hover{
+							color: #2C7CFF;
+						}
+						.icon-retweet:hover{
+							color: #00DD00;
+						}
+						.icon-favarite:hover{
+							color: #FF0066;
+						}
+						.icon-dm{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-dm:hover{
+							color: #2C7CFF;
+						}
 					}
-					.icon-favarite{
-						color: #C0C0C0;
-						font-size: 18px;
-						margin-right: 85px;
-					}
-					.icon-reply:hover{
-						color: #2C7CFF;
-					}
-					.icon-retweet:hover{
-						color: #00DD00;
-					}
-					.icon-favarite:hover{
-						color: #FF0066;
-					}
-					.icon-dm{
-						color: #C0C0C0;
-						font-size: 18px;
-						margin-right: 85px;
-					}
-					.icon-dm:hover{
-						color: #2C7CFF;
 					}
 				}
-			  }
 			}
 		}
 	}

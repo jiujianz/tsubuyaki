@@ -95,6 +95,20 @@
 					left: 85px;
 					top: 20px;
 				}
+				.fa-image{
+					position: relative;
+					right: -100px;
+					top: 20px;
+					color: dodgerblue;
+					font-size: 20px;
+					cursor: pointer;
+				}
+				.hidden{
+					position: relative;
+					right: -450px;
+					top: -7px;
+					visibility: hidden;
+				}
 				.form__submit{
 					background-color: #1E90FF;
 					font-size: 14px;

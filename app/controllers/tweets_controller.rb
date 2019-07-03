@@ -2,15 +2,17 @@ class TweetsController < ApplicationController
 
   def index
     @tweet = Tweet.new
-    # @tweets = @user.tweets.includes(:user)
+    @tweets = Tweet.includes(:user)
     @tweet_all = Tweet.all
   end
 
   def create
-    @tweet = @user.tweets.new(tweet_params)
-    if @tweet.save
-      redirect_to root_path
-    end
+    Tweet.create(image: tweet_params[:image], content: tweet_params[:content], user_id: current_user.id)
+  end
+
+  private
+  def tweet_params
+    params.permit(:image, :content)
   end
     
 end

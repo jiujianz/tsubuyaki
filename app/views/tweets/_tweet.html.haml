@@ -1,9 +1,10 @@
 .tweet-content
   .tweet-infomation
     %span.fullname
-    = current_user.name
+    = tweet.user.name
     %span.user-name{href:"https://twitter.com/"} @kintaro
-    %small.time 30分前
+    %small.time 
+      = tweet.created_at.strftime("%Y/%m/%d %H:%M")
   .tweet-content-text 
     = tweet.content
   .tweet-infomation-footer

@@ -78,6 +78,7 @@
 			}
 		}
 		.content{
+			height: fit-content;
 			width: 590px;
 			background-color: white;
 			margin: 0 10px;
@@ -127,10 +128,13 @@
 				}
 			}
 			.tweet{
-				padding: 10px 5px;
 				border: solid 1px #C0C0C0;
 				.tweet-content{
-					margin-left: 60px;
+					padding-left: 60px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-right: 10px;
+					border: solid 1px #C0C0C0;
 					.tweet-infomation{
 						background-color: white;
 						.fullname{

@@ -1,8 +1,7 @@
 class TweetsController < ApplicationController
 
   def index
-    @tweet = Tweet.new
-    @tweets = Tweet.includes(:user)
+    Tweet.includes(:user)
     @tweet_all = Tweet.all
   end
 

@@ -1,16 +1,11 @@
 .content
-	.tweet-content
-		.tweet-infomation
-			%a.fullname{href:"https://twitter.com/"} urashima taro
-			%a.user-name{href:"https://twitter.com/"} @kintaro
-			%small.time 30分前
-		.tweet-content-text hello world  こんにちはツイッター
-		.tweet-infomation-footer
-			.icon-reply
-				= fa_icon 'comment', class: 'icon'
-			.icon-retweet
-				= fa_icon 'retweet', class: 'icon'
-			.icon-favarite
-				= fa_icon 'heart', class: 'icon'
-			.icon-dm
-				= fa_icon 'envelope', class: 'icon'
+	.timeline-tweet-box
+		.home-tweet-box
+			= form_with(model: @tweet, url: tweets_path, local: true) do |f|
+				= f.text_field :content, class: 'form__image', placeholder: '今どうしてる？'
+				= f.label :image, class: 'icon' do
+					= fa_icon 'image'
+					= f.file_field :image, class: 'hidden'
+				= f.submit 'ツイート', class: 'form__submit'
+	.tweet
+		= render partial: 'tweet', collection: @tweet_all

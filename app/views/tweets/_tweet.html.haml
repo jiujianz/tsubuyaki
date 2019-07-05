@@ -1,0 +1,18 @@
+.tweet-content
+  .tweet-infomation
+    %span.fullname
+    = tweet.user.name
+    %span.user-name{href:"https://twitter.com/"} @kintaro
+    %small.time 
+      = tweet.created_at.strftime("%Y/%m/%d %H:%M")
+  .tweet-content-text 
+    = tweet.content
+  .tweet-infomation-footer
+    .icon-reply
+      = fa_icon 'comment', class: 'icon'
+    .icon-retweet
+      = fa_icon 'retweet', class: 'icon'
+    .icon-favarite
+      = fa_icon 'heart', class: 'icon'
+    .icon-dm
+      = fa_icon 'envelope', class: 'icon'

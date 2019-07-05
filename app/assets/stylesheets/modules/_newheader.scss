@@ -1,0 +1,10 @@
+.sideheader{
+  width: 357px;
+  &-contents{
+    float: right;
+    padding: 0px 20px;
+    &-symbol{
+      color: #1E90FF;
+    }
+  }
+}

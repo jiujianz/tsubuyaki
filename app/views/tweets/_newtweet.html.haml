@@ -1,0 +1,23 @@
+%main.maincontent
+  .maincontent-center
+    .maincontent-center-head
+      .maincontent-center-head-backspace
+        .maincontent-center-head-backspaceIcon
+          = link_to root_path do
+            = fa_icon 'arrow-left', class: "icon"
+      %h2.maincontent-center-head-username
+        = current_user.name
+      .maincontent-center-head-all
+    .maincontent-center-profile
+      .backimage
+      .usercontent
+        .usercontentInformation
+          .userimage
+            = image_tag ("profile_photo.png")
+          .editprofile
+            = link_to "プロフィールを編集", root_path, class: "a"
+        .username
+          .name
+            = current_user.name
+          .linkname @kintaro
+    .maincontent-center-tweets

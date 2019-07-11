@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_28_150122) do
+ActiveRecord::Schema.define(version: 2019_07_11_081223) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_06_28_150122) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "linkname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["false"], name: "index_users_on_false"
     t.index ["name"], name: "index_users_on_name"

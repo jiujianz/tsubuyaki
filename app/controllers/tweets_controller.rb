@@ -8,6 +8,10 @@ class TweetsController < ApplicationController
     Tweet.create(image: tweet_params[:image], content: tweet_params[:content], user_id: current_user.id)
   end
 
+  def show
+    @tweet = Tweet.find(params[:id])
+  end
+
   private
   def tweet_params
     params.permit(:image, :content)

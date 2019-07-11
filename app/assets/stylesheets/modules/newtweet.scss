@@ -1,0 +1,164 @@
+.maincontent{
+  display: flex;
+  border: 1px solid #DCDCDC;
+  &-center{
+    width: 600px;
+    height: 100vh;
+    overflow: scroll;
+    &-head{
+      height: 53px;
+      border: 1px solid #DCDCDC;
+      padding: 0px 10px;
+      display: flex;
+      &-backspace{
+        margin-right: 20px;
+        cursor: pointer;
+        &Icon{
+          font-size: 20px;
+          width: 37px;
+          height: 37px;
+          margin: 8px 0px;
+        }
+        &Icon:hover{
+          color: lightskyblue;
+          background-color: rgba(135, 206, 250, 0.3);
+          border-radius: 80px;
+        }
+          .icon{
+            position: relative;
+            color: deepskyblue;
+            top: 2px;
+            left: 10px;
+          }
+      }
+      &-username{
+        font-weight: bold;
+        font-size: 23px;
+      }
+    }
+    &-profile{
+      width: 100%;
+      height: fit-content;
+      .backimage{
+        height: 200px;
+        width: 100%;
+        background-color: gray;
+      }
+      .usercontent{
+        margin-bottom: 15px;
+        padding: 10px 10px 0px;
+        height: fit-content;
+        .usercontentInformation{
+          height: 50px;
+          margin-bottom: 15px;
+          padding: 10px 10px 0px;
+          display: flex;
+          .userimage{
+            height: 149px;
+            width: 145px;
+            position: relative;
+            top: -95px;
+            img{
+              border-radius: 77px;
+              height: 100%;
+              width: 100%;
+            }
+          }
+          .editprofile{
+            position: relative;
+            right: -215px;
+            margin-top: 10px;
+            .a{
+              margin-bottom: 15px;
+              padding: 10px 25px;
+              font-size: 18px;
+              text-decoration: none;
+              color: rgb(29, 161, 242);
+              border: 1px solid rgb(29, 161, 242);
+              border-radius: 80px;
+            }
+            .a:hover{
+              background-color: rgba(135, 206, 250, 0.3);
+              border-radius: 80px;
+            }
+          }
+          }
+        }
+        .username{
+          width: 100%;
+          margin: 5px 0px 10px;
+          font-weight: bold;
+          font-size: 23px;
+        }
+        .linkname{
+          color: #555555;
+          font-size: 15px;
+        }
+    }
+    &-tweets{
+      .tweet{
+				border: 1px solid #DCDCDC;
+				.tweet-content{
+					padding-left: 60px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-right: 10px;
+					.tweet-infomation{
+						background-color: white;
+						.fullname{
+							color: black;
+							text-decoration: none;
+						}
+						.user-name{
+							color: #555555;
+							text-decoration: none;
+						}
+						.time{
+							color: #555555;
+						}
+					&-content-text{
+						font-size: 14px;
+											line-height: 20px;
+					}
+					&-footer{
+						display: flex;
+						padding-top: 30px;
+						.icon-reply{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-retweet{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-favarite{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-reply:hover{
+							color: #2C7CFF;
+						}
+						.icon-retweet:hover{
+							color: #00DD00;
+						}
+						.icon-favarite:hover{
+							color: #FF0066;
+						}
+						.icon-dm{
+							color: #C0C0C0;
+							font-size: 18px;
+							margin-right: 85px;
+						}
+						.icon-dm:hover{
+							color: #2C7CFF;
+						}
+					}
+					}
+				}
+			}
+    }
+  }
+}

@@ -1,8 +1,9 @@
 .tweet-content
   .tweet-infomation
     %span.fullname
-    = tweet.user.name
-    %span.user-name{href:"https://twitter.com/"} @kintaro
+      = tweet.user.name
+    %span.user-name
+      = tweet.user.linkname
     %small.time 
       = tweet.created_at.strftime("%Y/%m/%d %H:%M")
   .tweet-content-text 

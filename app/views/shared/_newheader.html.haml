@@ -1,0 +1,33 @@
+%header.sideheader
+  .sideheader-contents
+    .sideheader-contents-symbol
+      = fa_icon 'twitter'
+    %nav.sideheader-contents-menu
+      .menuListItem-path
+        .menuListItem-path-link
+          = fa_icon 'home', class: "icon"
+          = link_to "ホーム", root_path, class: "a"
+      .menuListItem-path
+        .menuListItem-path-link
+          = fa_icon 'hashtag', class: "icon"
+          = link_to "話題を検索", root_path, class: "a"
+      .menuListItem-path
+        .menuListItem-path-link
+          = fa_icon 'bell', class: "icon"
+          = link_to "通知", root_path, class: "a"
+      .menuListItem-path
+        .menuListItem-path-link
+          = fa_icon 'envelope', class: "icon"
+          = link_to "メッセージ", root_path, class: "a"
+      .menuListItem-path
+        .menuListItem-path-link
+          = fa_icon 'bookmark', class: "icon"
+          = link_to "ブックマーク", root_path, class: "a"
+      .menuListItem-path
+        .menuListItem-path-link
+          = fa_icon 'list-alt', class: "icon"
+          = link_to "リスト", root_path, class: "a"
+      .menuListItem-path
+        .menuListItem-path-link
+          = fa_icon 'user-circle', class: "icon"
+          = link_to "プロフィール", root_path, class: "a"

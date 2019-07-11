@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  def edit
+  def show
+    @tweets = current_user.tweets.order("created_at DESC")
   end
 
   def update

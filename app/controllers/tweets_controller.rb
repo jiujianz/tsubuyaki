@@ -1,12 +1,15 @@
 class TweetsController < ApplicationController
 
   def index
-    Tweet.includes(:user)
-    @tweet_all = Tweet.all
+    @tweets = Tweet.includes(:user).order("created_at DESC")
   end
 
   def create
     Tweet.create(image: tweet_params[:image], content: tweet_params[:content], user_id: current_user.id)
+  end
+
+  def show
+    @tweet = Tweet.find(params[:id])
   end
 
   private

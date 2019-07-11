@@ -1,0 +1,43 @@
+%main.maincontent
+  .maincontent-center
+    .maincontent-center-head
+      .maincontent-center-head-backspace
+        .maincontent-center-head-backspaceIcon
+          = link_to root_path do
+            = fa_icon 'arrow-left', class: "icon"
+      %h2.maincontent-center-head-username
+        = current_user.name
+      .maincontent-center-head-all
+    .maincontent-center-profile
+      .backimage
+      .usercontent
+        .usercontentInformation
+          .userimage
+            = image_tag ("profile_photo.png")
+          .editprofile
+            = link_to "プロフィールを編集", root_path, class: "a"
+        .username
+          .name
+            = current_user.name
+          .linkname @kintaro
+    .maincontent-center-tweets
+      - @tweets.each do |tweet|
+        .content_post{style:"background-image: url(#{tweet.image})"}
+          .tweet
+            .tweet-content
+              .tweet-infomation
+                %span.fullname
+                  = tweet.user.name
+                %small.time 
+                  = tweet.created_at.strftime("%Y/%m/%d %H:%M")
+              .tweet-content-text 
+                = tweet.content
+              .tweet-infomation-footer
+                .icon-reply
+                  = fa_icon 'comment', class: 'icon'
+                .icon-retweet
+                  = fa_icon 'retweet', class: 'icon'
+                .icon-favarite
+                  = fa_icon 'heart', class: 'icon'
+                .icon-dm
+                  = fa_icon 'envelope', class: 'icon'

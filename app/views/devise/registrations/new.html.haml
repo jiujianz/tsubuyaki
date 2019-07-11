@@ -9,6 +9,11 @@
         = f.text_field :name, class: "newacountInputForm-box-field", autofocus: true, autocomplete: "name"
     .newacountInputForm-box
       .field
+        = f.label :@linkname
+        %br/
+        = f.text_field :linkname, class: "newacountInputForm-box-field", autofocus: true, autocomplete: "linkname"
+    .newacountInputForm-box
+      .field
         = f.label :email
         %br/
         = f.email_field :email, class: "newacountInputForm-box-field", autofocus: true, autocomplete: "email"

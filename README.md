@@ -6,6 +6,7 @@
 |Column|Type|Option|
 |------|----|------|
 |name|integer|null: false, unique: true, index: true|
+|linkname|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
 

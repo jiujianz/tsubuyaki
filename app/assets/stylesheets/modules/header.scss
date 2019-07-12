@@ -65,7 +65,20 @@
           width: 220px;
           background-color: white;
           &-usermenu{
-            
+            font-weight: bold;
+            font-size: 18px;
+            .signout-button{
+              background-color: #1E90FF;
+              border-radius: 80px;
+              text-align: center;
+              height: 65px;
+              a{
+                text-decoration: none;
+                position: relative;
+                top: 19px;
+                color: white;
+              }
+            }
           }
         }
     }

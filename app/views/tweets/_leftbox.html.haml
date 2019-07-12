@@ -2,14 +2,15 @@
   .leftbox-profile
     .leftbox-profile-link
       .link-mypage 
-        = link_to "プロフィール編集", user_path(current_user)
+        = link_to "",user_path(current_user)
     .leftbox-profile-content
       .leftbox-profile-infomation 
         .leftbox-profile-fullname 
-          %a.acount-name{href:"https://twitter.com/"} 
+          %a.acount-name
           = current_user.name
         %span.leftbox-profile-username
-          %a.link-name{href:"https://twitter.com/"} @kintaro
+          %a.link-name
+            = current_user.linkname
       .follow-list
         %ul.follow-list-stats
           %li.follow-list-people 

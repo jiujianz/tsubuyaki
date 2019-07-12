@@ -19,25 +19,32 @@
         .username
           .name
             = current_user.name
-          .linkname @kintaro
+          .linkname 
+            = current_user.linkname
     .maincontent-center-tweets
       - @tweets.each do |tweet|
-        .content_post{style:"background-image: url(#{tweet.image})"}
-          .tweet
-            .tweet-content
-              .tweet-infomation
-                %span.fullname
-                  = tweet.user.name
-                %small.time 
-                  = tweet.created_at.strftime("%Y/%m/%d %H:%M")
-              .tweet-content-text 
-                = tweet.content
-              .tweet-infomation-footer
-                .icon-reply
-                  = fa_icon 'comment', class: 'icon'
-                .icon-retweet
-                  = fa_icon 'retweet', class: 'icon'
-                .icon-favarite
-                  = fa_icon 'heart', class: 'icon'
-                .icon-dm
-                  = fa_icon 'envelope', class: 'icon'
+        .tweet
+          .tweet-content{style:"background-image: url(#{tweet.image})"}
+            .tweet-infomation
+              %span.fullname
+                = tweet.user.name
+              %span.link-name
+                = tweet.user.linkname
+              %small.time 
+                = tweet.created_at.strftime("%Y/%m/%d %H:%M")
+            .tweet-link
+              = fa_icon 'angle-down'
+              %ul.more_list
+                %li
+                  = link_to "削除", "/tweets/#{tweet.id}", method: :delete
+            .tweet-content-text 
+              = tweet.content
+            .tweet-infomation-footer
+              .icon-reply
+                = fa_icon 'comment', class: 'icon'
+              .icon-retweet
+                = fa_icon 'retweet', class: 'icon'
+              .icon-favarite
+                = fa_icon 'heart', class: 'icon'
+              .icon-dm
+                = fa_icon 'envelope', class: 'icon'
